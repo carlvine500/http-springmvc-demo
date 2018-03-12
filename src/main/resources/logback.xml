@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration>
+<configuration>
+
+
+	<jmxConfigurator/>
+	<property name="LOG_LEVEL" value="INFO"/>
+	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%thread] %logger{50}.%M\(%file:%line\) - %msg%n
+			</pattern>
+			<charset class="java.nio.charset.Charset">UTF-8</charset>
+		</encoder>
+	</appender>
+
+	<root>
+		<appender-ref ref="consoleAppender"/>
+	</root>
+
+	<logger name="org.springframework.core" value="INFO" level="INFO"/>
+	<logger name="org.springframework.beans" value="INFO" level="INFO"/>
+	<logger name="org.springframework.context" value="INFO" level="INFO"/>
+	<logger name="org.springframework.web" value="INFO" level="INFO"/>
+	<logger name="org.apache.zookeeper" value="INFO" level="INFO"/>
+	<logger name="spring.boot" value="INFO" level="INFO"/>
+
+
+</configuration>
